@@ -58,7 +58,31 @@ JaveScript is a prototype-based object oriented programming language, which mean
   property: name-value pair, separated by a colon.
   method: properties containing functions.
   
-##### object container
+#### object container
 const: constant. Objects are typyically constants: we can change the properties of the object inside the container. We can't remove or replace the object from the container. 
-##### object properties
+#### object properties
 property name can only contain letters, digits, dollar signs and underscores. 
+#### accessing object properties
+1. dot notation
+    console.log("the pockateNum: ", backpack.pocketNum);
+2. bracket notation, can be used when there is non-standard property name.
+    console.log("the pockateNum: ", backpack["pocketNum"]);
+#### object method
+functions sitting inside objects.
+    1.
+    toggleLid: function (lidStatus) {
+    this.lidOpen = lidStatus;
+  },
+or its short version:
+    2.
+functions sitting inside objects.
+    toggleLid(lidStatus) {
+    this.lidOpen = lidStatus;
+  },
+#### classes: object blueprints or templates
+1. Class declaration: class Name {}
+2. Class expression:  const Name = class {}
+#### object constructors
+The diffrence between the class and the obejct constructor is that the methods live inside the main construction function just like the properties do, whereas in the class, the definition of these methods happens outside the main constructor function, and there is no need semicolon to separate them. Only ues object constructor when you editing a old system which is not support the class, since class is a new term in JS.
+#### global objects
+In addition to the obejcts that are created by yourseld, the browser has a long list of default objects you can use for a variety of different purposes.
