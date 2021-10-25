@@ -79,6 +79,7 @@ functions sitting inside objects.
     toggleLid(lidStatus) {
     this.lidOpen = lidStatus;
   },
+Object methods must be declared using function expressions or the method definition shorthand, and can't use arrow functions. 
 #### classes: object blueprints or templates
 1. Class declaration: class Name {}
 2. Class expression:  const Name = class {}
@@ -86,3 +87,5 @@ functions sitting inside objects.
 The diffrence between the class and the obejct constructor is that the methods live inside the main construction function just like the properties do, whereas in the class, the definition of these methods happens outside the main constructor function, and there is no need semicolon to separate them. Only ues object constructor when you editing a old system which is not support the class, since class is a new term in JS.
 #### global objects
 In addition to the obejcts that are created by yourseld, the browser has a long list of default objects you can use for a variety of different purposes.
+
+Object's name can't be same with its class name. If the calss is a constant, this will cause an error. If the class is not a constant, the new object will overwrite the class.
