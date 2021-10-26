@@ -90,7 +90,7 @@ In addition to the obejcts that are created by yourseld, the browser has a long 
 
 Object's name can't be same with its class name. If the calss is a constant, this will cause an error. If the class is not a constant, the new object will overwrite the class.
 
-
+## String output
 #### Template literals
 back ticks tell the browser that anything inside here is a template literal, meaning we can mix HTML and strings.
 move this part from the html <body> ... </body>
@@ -135,3 +135,6 @@ document.body.innerHTML = content;
 ```
 const content = "<h1>" + everydayPack.name + "</h1>";
 ```
+
+## DOM
+DOM: document object model. It describe the hierarchical tree structure for a HTML document.
