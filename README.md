@@ -89,3 +89,49 @@ The diffrence between the class and the obejct constructor is that the methods l
 In addition to the obejcts that are created by yourseld, the browser has a long list of default objects you can use for a variety of different purposes.
 
 Object's name can't be same with its class name. If the calss is a constant, this will cause an error. If the class is not a constant, the new object will overwrite the class.
+
+
+#### Template literals
+back ticks tell the browser that anything inside here is a template literal, meaning we can mix HTML and strings.
+move this part from the html <body> ... </body>
+```
+    <main>
+      <article>
+        <h1>Everyday Backpack</h1>
+        <ul>
+          <li>Volume:</li>
+          <li>Color:</li>
+          <li>Age:</li>
+          <li>Number of pockets:</li>
+          <li>Left strap length:</li>
+          <li>Right strap length:</li>
+          <li>Lid status:</li>
+        </ul>
+      </article>
+    </main>
+```
+to JS
+```
+const content = `
+    <main>
+      <article>
+        <h1>${everydayPack.name}</h1>
+        <ul>
+          <li>Volume: ${everydayPack.volume}</li>
+          <li>Color: ${everydayPack.color}</li>
+          <li>Age: ${everydayPack.backpackAge()}</li>
+          <li>Number of pockets: ${everydayPack.pocketNum}</li>
+          <li>Left strap length: ${everydayPack.strapLength.left}</li>
+          <li>Right strap length: ${everydayPack.strapLength.right}</li>
+          <li>Lid status: ${everydayPack.lidOpen}</li>
+        </ul>
+      </article>
+    </main>
+`;
+
+document.body.innerHTML = content;
+```
+#### conventional way without template literal
+```
+const content = "<h1>" + everydayPack.name + "</h1>";
+```
