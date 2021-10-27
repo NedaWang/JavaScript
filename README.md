@@ -138,3 +138,9 @@ const content = "<h1>" + everydayPack.name + "</h1>";
 
 ## DOM
 DOM: document object model. It describe the hierarchical tree structure for a HTML document.
+#### Acceess elements with querySelector
+Both querySelector and querySelectorAll methods take CSS query as their perameter.
+The querySelector returns a DOM object (first match), and it is a pure JavaScript object. This is basically using CSS in JavaScript.  
+```
+document.querySelectorAll("main span")
+```
