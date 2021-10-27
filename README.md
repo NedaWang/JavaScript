@@ -142,5 +142,10 @@ DOM: document object model. It describe the hierarchical tree structure for a HT
 Both querySelector and querySelectorAll methods take CSS query as their perameter.
 The querySelector returns a DOM object (first match), and it is a pure JavaScript object. This is basically using CSS in JavaScript.  
 ```
-document.querySelectorAll("main span")
+document.querySelectorAll("main span")  // return type: NodeList
+```
+#### access elements using older methods
+```
+document.getElementsByClassName("packprop backpack__color")  // parameter has two class names; it returns HTMLCollections
+document.getElementById("everyday")
 ```
