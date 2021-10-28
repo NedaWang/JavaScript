@@ -149,3 +149,13 @@ document.querySelectorAll("main span")  // return type: NodeList
 document.getElementsByClassName("packprop backpack__color")  // parameter has two class names; it returns HTMLCollections
 document.getElementById("everyday")
 ```
+#### Modifying element classes
+```
+// old method
+document.querySelector("h1").className = "new-class" // but we should be careful about using the class name property, especially in React and other framework.
+// instead, we can use classList property, which gives a Dom token collection of all the classes appended to an elememt.
+document.querySelector("main li:first-child").classList.add("new-class")
+document.querySelector("main li:first-child").classList.remove("new-class")
+document.querySelector("main li:first-child").classList.toggle("new-class") // add if it is not there, remove it exists.
+document.querySelector("main li:first-child").classList.replace("packprop","new-class")
+```
