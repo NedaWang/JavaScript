@@ -62,6 +62,7 @@ JaveScript is a prototype-based object oriented programming language, which mean
 const: constant. Objects are typyically constants: we can change the properties of the object inside the container. We can't remove or replace the object from the container. 
 #### object properties
 property name can only contain letters, digits, dollar signs and underscores. 
+JavaScript does not allow for hyphens in property names. When targeting CSS properties, use camelCase, so the "font-family" property becomes "fontFamily".
 #### accessing object properties
 1. dot notation
     console.log("the pockateNum: ", backpack.pocketNum);
@@ -138,6 +139,7 @@ const content = "<h1>" + everydayPack.name + "</h1>";
 
 ## DOM
 DOM: document object model. It describe the hierarchical tree structure for a HTML document.
+DOM is short for "Document Object Model", the document object the browser creates when it renders an HTML document.
 #### Acceess elements with querySelector
 Both querySelector and querySelectorAll methods take CSS query as their perameter.
 The querySelector returns a DOM object (first match), and it is a pure JavaScript object. This is basically using CSS in JavaScript.  
@@ -184,3 +186,20 @@ main.append(newArticle);   // add it to the end of an exist element
 // ParentNode.prepend(NewElement) add it to the begining od an exist element
 // other methods: appendChild(), replaceChild(), insertBefor(), insertAdjcentElement()
 ```
+
+## Variables and Data Types
+#### var
+classic variable container. var is mutable, globally-scoped variable, and we can change its data type. It is the default variable type, we don't need to explicitly use "var" to define a var in console, but in editor we need to do so. 
+```
+var container = 5, x = 3, y = "blu"
+```
+var is global-scoped variable, meaning that even we change a var's value inside a function, the new assignment applies everywhere in the document after the instance (where you call the function). 
+#### let
+block-scoped local variable, safely avoid variable scope issue.
+```
+function headingColor() {
+  let color = "blue";
+  document.querySelector(".title").style.color = color;
+}
+```
+If we use the let variable outside the block, there is an error. When browser run it, it encounter the error, and it won't render the rest part of JS after the error. So normally use **let** instead **var**, they both mutable.
