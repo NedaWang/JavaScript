@@ -159,3 +159,17 @@ document.querySelector("main li:first-child").classList.remove("new-class")
 document.querySelector("main li:first-child").classList.toggle("new-class") // add if it is not there, remove it exists.
 document.querySelector("main li:first-child").classList.replace("packprop","new-class")
 ```
+#### Attributes
+```
+document.querySelector("img").attributes // return a NameNodeMap
+document.querySelector("img").hasAttribute("src") // return boolean
+document.querySelector("img").getAttribute("src")
+document.querySelector("img").setAttribute("alt","a drawing of backpack")
+document.querySelector("img").removeAttribute("title")
+```
+#### Inline style
+If an element has inline styles, meaning there are CSS declarations in the element itself. That inline CSS is stored in the style property of the elements.
+```
+document.querySelector(".site-title").style   // contains every possible property
+document.querySelector(".site-title").style.color = "rebeccapurple"   // change color property
+```
