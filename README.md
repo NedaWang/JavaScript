@@ -158,6 +158,7 @@ document.querySelector("main li:first-child").classList.add("new-class")
 document.querySelector("main li:first-child").classList.remove("new-class")
 document.querySelector("main li:first-child").classList.toggle("new-class") // add if it is not there, remove it exists.
 document.querySelector("main li:first-child").classList.replace("packprop","new-class")
+document.querySelector("main li:nth-child(3)")    // get the 3rd li child
 ```
 #### Attributes
 ```
@@ -173,3 +174,4 @@ If an element has inline styles, meaning there are CSS declarations in the eleme
 document.querySelector(".site-title").style   // contains every possible property
 document.querySelector(".site-title").style.color = "rebeccapurple"   // change color property
 ```
+#### Add DOM elements
