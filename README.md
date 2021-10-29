@@ -175,3 +175,12 @@ document.querySelector(".site-title").style   // contains every possible propert
 document.querySelector(".site-title").style.color = "rebeccapurple"   // change color property
 ```
 #### Add DOM elements
+```
+const newArticle = document.createElement("article");   // create new element
+newArticle.classList.add("backpack");   // give it class
+newArticle.setAttribute("id", "everyday");   // give it id
+newArticle.innerHTML = content;   // set content (template literal)
+main.append(newArticle);   // add it to the end of an exist element
+// ParentNode.prepend(NewElement) add it to the begining od an exist element
+// other methods: appendChild(), replaceChild(), insertBefor(), insertAdjcentElement()
+```
