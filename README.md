@@ -213,3 +213,11 @@ Include: String, number, boolean, null, undefined, object, array.
 // use typeof operator 
 typrof variableName
 ```
+#### Assignment vs. Comparison
+"=" : assignemnt of a value to a variable.
+"==", "!=": loose comparison, or semiotic equivalent,  meaning are the values are same. 
+"===", "!==" : absolute equivalence test
+```
+5 == "5" // returns true, because the values looks same. 
+5 === "5" // return false
+```
