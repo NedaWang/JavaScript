@@ -203,3 +203,13 @@ function headingColor() {
 }
 ```
 If we use the let variable outside the block, there is an error. When browser run it, it encounter the error, and it won't render the rest part of JS after the error. So normally use **let** instead **var**, they both mutable.
+#### const
+define block-scoped constant. 
+We can't put new stuff in the const box. That doesn't mean we can't change the status or properties or other features of what the constant holds.
+#### data types
+JavaScript is a weekly typed language, meaning you don't have to declare what type of data goes into your variables. 
+Include: String, number, boolean, null, undefined, object, array.  
+```
+// use typeof operator 
+typrof variableName
+```
