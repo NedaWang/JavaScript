@@ -222,4 +222,5 @@ typrof variableName
 5 === "5" // return false
 ```
 #### Math operators
-+, -, *, /, % (modulus), **(exponentiation)
++, -, *, /, % (modulus), **(exponentiation), ++a, a++, 
+JavaScript often interprets a single number inside a string as the number itself. But when we **add** a number and a string, it treats them both as strings and append them. But it only works on addition. If we use minus, JS will treat them as numbers.
