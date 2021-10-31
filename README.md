@@ -221,3 +221,5 @@ typrof variableName
 5 == "5" // returns true, because the values looks same. 
 5 === "5" // return false
 ```
+#### Math operators
++, -, *, /, % (modulus), **(exponentiation)
