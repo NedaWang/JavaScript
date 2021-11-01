@@ -224,3 +224,15 @@ typrof variableName
 #### Math operators
 +, -, *, /, % (modulus), **(exponentiation), ++a, a++, 
 JavaScript often interprets a single number inside a string as the number itself. But when we **add** a number and a string, it treats them both as strings and append them. But it only works on addition. If we use minus, JS will treat them as numbers.
+
+## Arrays
+```
+const a = ["1",2,"3",4]
+a.length   // 4
+a[0]   // '1'
+a[0] = "camera"  // can place any data type inside any slot in an array.
+a[a.length] = "new item"
+a[8] = "at the end"  // ['camera', 2, '3', 4, 'new item', empty × 3, 'at the end']
+a[7]  // undefined
+
+```
