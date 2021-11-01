@@ -234,5 +234,21 @@ a[0] = "camera"  // can place any data type inside any slot in an array.
 a[a.length] = "new item"
 a[8] = "at the end"  // ['camera', 2, '3', 4, 'new item', empty × 3, 'at the end']
 a[7]  // undefined
-
+```
+#### Array meethods
+```
+// print all items as a string, define the format by parameter
+a.join()  // 'camera,2,3,4,new item,,,,at the end'
+a.join(' ')  //'camera 2 3 4 new item    at the end' 
+a.join(', ')  'camera, 2, 3, 4, new item, , , , at the end'
+// add new items at the end
+a.push("item1", "item2")
+// add new items at the beginning
+a.unshift("hello","hi")
+// take the first item out of the array
+a.shift() // the item will be returned by the shift() function
+// take the last time out
+a.pop()
+// advanced method
+a.find(function (item){if(item >1){return item}})  // using some of these array functions, we can apply new functions to the individual items within the array, or we can customize the array in pretty much any way we want.
 ```
