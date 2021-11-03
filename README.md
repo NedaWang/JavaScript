@@ -252,3 +252,31 @@ a.pop()
 // advanced method
 a.find(function (item){if(item >1){return item}})  // using some of these array functions, we can apply new functions to the individual items within the array, or we can customize the array in pretty much any way we want.
 ```
+
+## Functions
+A function is a function that sits on itself, whereas a method is a function that sits inside an object and acts on that object.
+```
+// Function declaration:
+function doSomeMath(a, b) {
+  let c = a + b;
+  return c;
+}
+// can be accidentally overrided.
+
+// Function expression:
+const doMoreMath = function (a = 3, b = 2) {
+  let c = a * b;
+  return c;
+};
+// It doesn't in itself have a name. Instead, we place it inside a variable and then we call the variable.
+// It will then have the same scope as that variable type
+// we can add default parameters.
+
+// Immediately Invoked Function Expression (IIFE)
+(function () {
+    let a = 4;
+    let b = 6;
+    let c = doSomeMath(a, b);
+    console.log(`The sum of a and b is: ${c}`);
+})();
+```
