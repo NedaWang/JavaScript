@@ -235,7 +235,7 @@ a[a.length] = "new item"
 a[8] = "at the end"  // ['camera', 2, '3', 4, 'new item', empty × 3, 'at the end']
 a[7]  // undefined
 ```
-#### Array meethods
+#### Array methods
 ```
 // print all items as a string, define the format by parameter
 a.join()  // 'camera,2,3,4,new item,,,,at the end'
@@ -261,7 +261,7 @@ function doSomeMath(a, b) {
   let c = a + b;
   return c;
 }
-// can be accidentally overrided.
+// can be accidentally overrided.  function declarations can be hoisted, meaning you can call the function before it is declared in JavaScript.
 
 // Function expression:
 const doMoreMath = function (a = 3, b = 2) {
@@ -279,4 +279,21 @@ const doMoreMath = function (a = 3, b = 2) {
     let c = doSomeMath(a, b);
     console.log(`The sum of a and b is: ${c}`);
 })();
+```
+#### Arrow function
+Shorter way to write function, and they also have some special properties. 
+```
+// Traditional Anonymous Function
+function (a){
+  return a + 100;
+}
+// Arrow Function Break Down
+// 1. Remove the word "function" and place arrow between the argument and opening body bracket
+(a) => {
+  return a + 100;
+}
+// 2. Remove the body braces and word "return" -- the return is implied.
+(a) => a + 100;
+// 3. Remove the argument parentheses
+a => a + 100;
 ```
