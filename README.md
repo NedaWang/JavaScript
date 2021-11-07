@@ -261,7 +261,8 @@ function doSomeMath(a, b) {
   let c = a + b;
   return c;
 }
-// can be accidentally overrided.  function declarations can be hoisted, meaning you can call the function before it is declared in JavaScript.
+// can be accidentally overrided.  
+// function declarations can be hoisted, meaning you can call the function before it is declared in JavaScript, and the function declaration is hoisted to the global scope?
 
 // Function expression:
 const doMoreMath = function (a = 3, b = 2) {
@@ -296,4 +297,29 @@ function (a){
 (a) => a + 100;
 // 3. Remove the argument parentheses
 a => a + 100;
+```
+#### Arrow function scope and **this** keyword
+an arrow function does not have its own 'this.' It does not know what this means and it will refer to the closest available scope which in this case is the object.
+```
+window.volume = 20;
+
+const greenPack = {
+  name: "Frog Pack",
+  color: "green",
+  volume: 8,
+  pocketNum: 3,
+  newVolume: function (volume) {
+    console.log("this.volume in the method:", this.volume);   // this.volume in the method: 8
+    this.volume = volume;
+    console.log("this.volume after update:", this.volume);  // this.volume after update: 5
+    (function () {
+      console.log("this.volume in nested function:", this.volume);  // this.volume in nested function: 20
+    })();
+    (() => {
+      console.log("this.volume in arrow function:", this.volume);  // this.volume in arrow function: 5
+    })();
+  },
+};
+
+console.log(greenPack.newVolume(5));
 ```
