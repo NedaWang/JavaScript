@@ -330,3 +330,4 @@ const greenPack = {
 
 console.log(greenPack.newVolume(5));
 ```
+#### function parameters
